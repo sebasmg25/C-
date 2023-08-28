@@ -123,27 +123,24 @@
 
 //bool OutArgExample(out int number)
 //{
-    
+
 //    number = 44;
 
 //    return true;
 //}
 
 #region funciones
-//void miMetodo()
-//{
 
-//}
-
-//static void miMetodo2()
-//{
-
-//}
-int sumarNumeros(int x,int y)
+static void saludar()
 {
-    return x+y;
+    Console.WriteLine("Hola, como estas?");
 }
-Console.WriteLine(sumarNumeros(2,3));
+saludar();
+int sumarNumeros(int x, int y)
+{
+    return x + y;
+}
+Console.WriteLine(sumarNumeros(2, 3));
 
 string concatenarCadenas(string cadena1, string cadena2)
 {
@@ -151,15 +148,22 @@ string concatenarCadenas(string cadena1, string cadena2)
 }
 Console.WriteLine(concatenarCadenas("hola", "mundo"));
 
-bool verdaderoOFalso()
+bool verdaderoOFalso(int numero1, int numero2)
 {
-    if (0 > 1)
+    if (numero1 > numero2)
     {
         return true;
     }
     return false;
 }
-Console.WriteLine(verdaderoOFalso(true));
+Console.WriteLine(verdaderoOFalso(1, 2));
+
+string cadenaDeSalida;
+string cambiarString (out cadenaDeSalida)
+{
+    cadenaDeSalida = "Hola";
+    Console.WriteLine(cambiarString(cadenaDeSalida));
+}
 
 
 
