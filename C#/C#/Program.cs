@@ -148,23 +148,44 @@ string concatenarCadenas(string cadena1, string cadena2)
 }
 Console.WriteLine(concatenarCadenas("hola", "mundo"));
 
-bool verdaderoOFalso(int numero1, int numero2)
+/**
+ * Retornar si el numero 1 es mayor que numero dos
+ * e indicar que numero es mayor
+ */
+bool verdaderoOFalso(int numero1, int numero2, out int grandNumberx)
+
 {
-    if (numero1 > numero2)
+
+    if(numero1 > numero2)
     {
+        grandNumberx = numero1;
         return true;
     }
+
+    grandNumberx = numero2;
+    //num uno es mayor que num 2 
+    return false;
+    
+}
+int grandNumber;
+
+verdaderoOFalso(3, 2, out grandNumber);
+Console.WriteLine();
+
+Console.WriteLine(grandNumber);
+
+bool verdaderoOFalso2(int num1, int num2)
+{
+    int numeroMayor;
+    if (num1 > num2)
+    {
+        numeroMayor = num1;
+        return true;
+    }
+    numeroMayor = num2;
     return false;
 }
-Console.WriteLine(verdaderoOFalso(1, 2));
-
-string cadenaDeSalida;
-string cambiarString (out cadenaDeSalida)
-{
-    cadenaDeSalida = "Hola";
-    Console.WriteLine(cambiarString(cadenaDeSalida));
-}
-
-
+Console.WriteLine(verdaderoOFalso2(3,2));
+Console.WriteLine();
 
 #endregion
